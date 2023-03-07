@@ -22,7 +22,7 @@ const Chat = () => {
 
     // when a person is logged in, we passed a currentUser._id to the websockets
     useEffect(() => {
-        socket.current = io("http://localhost:4444");
+        socket.current = io("https://chat-0y1j.onrender.com");
         socket.current.emit("add-user", currentUser._id);
     }, [currentUser]);
 
